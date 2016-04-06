@@ -33,12 +33,7 @@ public class ScriptCompiler {
     public void run(String script) {
         try {
             MyBaseScript myBaseScript = compile(script).newInstance();
-            try {
-                myBaseScript.run();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            myBaseScript.execute();
+            myBaseScript.run();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

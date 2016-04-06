@@ -13,7 +13,17 @@ def runExample = { String memo, String code ->
 
 runExample '''
 
-First, we invoke a method which is known to be valid. Everything is statically compiled, except from this dynamic method. It will
+First, just execute a script that defines a task. Everything is statically compiled.
+
+''', '''
+    task('hello', com.acme.tasks.Hello) {
+        name = 'Chris'
+    }
+'''
+
+runExample '''
+
+Then, we invoke a method which is known to be valid. Everything is statically compiled, except from this dynamic method. It will
 throw a runtime error, but that's fine.
 
 ''', '''

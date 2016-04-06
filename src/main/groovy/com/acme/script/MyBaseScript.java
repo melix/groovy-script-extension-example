@@ -49,10 +49,19 @@ public abstract class MyBaseScript extends Script implements Blessed {
         throw new IllegalStateException("THOUGH SHALT NOT PASS!");
     }
 
-    public void execute() {
+    private void execute() {
         for (Task task : tasks.values()) {
             task.execute();
         }
+    }
+
+    public abstract Object scriptBody();
+
+    @Override
+    public Object run() {
+        Object res = scriptBody();
+        execute();
+        return res;
     }
 
     @Override
