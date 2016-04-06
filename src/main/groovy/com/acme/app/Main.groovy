@@ -50,6 +50,6 @@ Last example, trying to call a public method from the base script class, but tha
 
 ''', '''
 
-    thoughShaltNotPass()
+    thouShaltNotPass()
 
 '''

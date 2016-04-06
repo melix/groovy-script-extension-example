@@ -45,8 +45,8 @@ public abstract class MyBaseScript extends Script implements Blessed {
         return t;
     }
 
-    public void thoughShaltNotPass() {
-        throw new IllegalStateException("THOUGH SHALT NOT PASS!");
+    public void thouShaltNotPass() {
+        throw new IllegalStateException("THOU SHALT NOT PASS!");
     }
 
     private void execute() {
