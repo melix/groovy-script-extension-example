@@ -1,0 +1,14 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+repositories {
+   jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy:2.4.6'
+}
+
+mainClassName = 'com.acme.app.Main'
+
