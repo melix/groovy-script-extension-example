@@ -23,3 +23,6 @@ A script compiler:
 - sets the base script class to a class that implements blessed interfaces
 - applies a type checking extension which recognizes some method calls as dynamic
 
+The type checking extension is able to recognize invalid method calls, and turn them into dynamic calls, but also recognize valid method calls and perform additional checks, like checking that it's a blessed interface.
+The benefit of this is that everything happens at compile time, so there's no cost at invocation time.
+
